@@ -1,0 +1,107 @@
+/* Base styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(139, 139, 232);
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container to centralize content */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgb(175, 175, 235);
+}
+
+/* Headings styling */
+h1, h2 {
+    color: #333;
+}
+
+/* Form labels styling */
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+/* Inputs and textarea styling */
+input, textarea {
+    width: 100%; /* Full width for better responsiveness */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+/* Button styling */
+button {
+    padding: 10px 15px;
+    background-color: rgb(139, 139, 232);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 20%; /* Full-width buttons for mobile */
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: rgb(118, 118, 230);
+}
+
+/* Resume output container */
+#resume-output {
+    margin-top: 30px;
+}
+
+#resume-content {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for responsive behavior */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem; /* Adjust heading sizes for tablet */
+    }
+
+    button {
+        font-size: 0.9rem; /* Adjust button text size */
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 10px;
+        max-width: 100%; /* Full width for mobile */
+    }
+
+    h1, h2 {
+        font-size: 1.2rem; /* Smaller font sizes for mobile */
+    }
+
+    input, textarea {
+        padding: 8px;
+        font-size: 0.9rem; /* Adjust input text size */
+    }
+
+    button {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+}
