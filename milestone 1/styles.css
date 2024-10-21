@@ -1,4 +1,4 @@
-/* Reset and base styling */
+/* Base Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,111 +6,259 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0e0ed;
-    color: #333;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1abc9c, #3498db);
+    color: #2c3e50;
     padding: 20px;
-    max-width: 780px;
-    margin: auto;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-.personal-info {
+/* Container Styling */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
     margin-bottom: 40px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0px 0px 5px rgb(194, 19, 86);
-    /* text-align: center; Center-align for small screens */
-}
-
-.bg {
-    top: 15px;
-    background-color: pink;
-    padding: 10px;
-    border: 1px solid pink;
-    border-radius: 10px;
 }
 
 .heading {
-    text-align: center;
-    padding-bottom: 10px;
+    font-size: 3rem;
+    color: #ffffff;
+    font-weight: 700;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
-section {
-    margin-bottom: 40px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0px 0px 5px rgb(194, 19, 86);
+.subtitle {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
 }
 
+/* Glassmorphism Effect for Cards */
+.glass-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Titles */
+h2 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+h2:after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #ffffff;
+    margin-top: 10px;
+}
+
+/* Personal Info */
+/* Personal Info */
+.personal-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Image Styling */
+.profile-pic {
+    width: 150px;  /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px; /* Margin below the image */
+    margin-right: 20px;  /* Margin to separate from text */
+}
+
+/* Info Text Styling */
+.info-text {
+    /* No additional left margin, the right margin on image will create space */
+}
+
+.info-text h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-top: 0; /* Reset margin-top if necessary */
+}
+
+.job-title {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+.contact-info i {
+    color: rgba(255, 255, 255, 0.9);
+    margin-right: 10px;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 5px;
+}
+
+/* Skills Section */
+/* Skills Section */
+/* Skills Section */
+#skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#skills-list li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 20px; /* Padding adjusted */
+    border-radius: 30px;
+    font-size: 1rem;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative; /* Positioning for the icon */
+}
+
+#skills-list li:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+#skills-list li:before {
+    content: '\f058'; /* Arrow icon */
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    left: 15px; /* Adjusted to position the arrow */
+    color: #f39c12;
+    font-weight: 900;
+    font-size: 1.4rem;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for centering */
+}
+
+#skills-list li .skill-text {
+    margin-left: 40px; /* Space between arrow and text */
+}
+
+
+
+/* Button */
+button.toggle-btn {
+    background-color: #f39c12;
+    color: #ffffff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.toggle-btn:hover {
+    background-color: #e67e22;
+    transform: translateY(-5px);
+}
+
+/* List Styling */
 ul {
     list-style: none;
 }
 
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
+ul li {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
 }
 
-button.toggle-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
+ul li:before {
+    content: '\f058';
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    left: 0;
+    color: #f39c12;
+    font-weight: 900;
+    font-size: 1.4rem;
 }
 
-button.toggle-btn:hover {
-    background-color: #0056b3;
-}
+/* Media Queries for Responsiveness */
 
-button.toggle-btn:focus {
-    outline: none;
-}
-
-#toggle-skills {
-    padding: 10px;
-    margin-top: 10px;
-}
-
-/* Responsive Design */
+/* For tablets */
 @media (max-width: 768px) {
-    /* For tablets and smaller devices */
-    body {
-        padding: 15px;
-    }
-
-    .personal-info, section {
-        padding: 15px;
-        margin-bottom: 30px;
-    }
-
     .profile-pic {
-        width: 120px;
-        height: 120px;
+        width: 100px;  /* Smaller size for mobile */
+        height: 100px; /* Smaller size for mobile */
+        margin-right: 10px; /* Reduced margin for mobile */
     }
 
-    button.toggle-btn {
-        padding: 8px 15px;
-        font-size: 0.9rem;
+    .info-text h2 {
+        font-size: 1.5rem; /* Adjust font size for mobile */
+    }
+
+    .job-title {
+        font-size: 1rem; /* Adjust font size for mobile */
     }
 }
 
-@media (max-width: 480px) {
-    /* For mobile phones */
-    body {
-        padding: 10px;
+    .heading {
+        font-size: 2.5rem;
     }
 
-    .personal-info, section {
-        padding: 10px;
-        margin-bottom: 20px;
+    .glass-card {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .glass-card {
+        padding: 15px;
     }
 
     .profile-pic {
@@ -118,8 +266,53 @@ button.toggle-btn:focus {
         height: 100px;
     }
 
-    button.toggle-btn {
-        padding: 6px 12px;
+    .job-title {
+        font-size: 1rem;
+    }
+
+    .contact-info p {
+        font-size: 0.9rem;
+    }
+
+    #skills-list li {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .heading {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .glass-card {
+        padding: 10px;
+    }
+
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+    }
+
+    .job-title {
+        font-size: 0.9rem;
+    }
+
+    .contact-info p {
         font-size: 0.8rem;
+    }
+
+    #skills-list li {
+        font-size: 0.8rem;
+        padding: 8px 12px;
     }
 }
