@@ -1,107 +1,156 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 /* Base styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: rgb(139, 139, 232);
-    margin: 0;
-    padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  background: #e3f2fd; /* Light blue background */
+  color: #333;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
-/* Container to centralize content */
+/* Container */
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: rgb(175, 175, 235);
+  max-width: 800px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid #bbdefb; /* Soft border for a clean blue look */
 }
 
-/* Headings styling */
-h1, h2 {
-    color: #333;
+.container:hover {
+  transform: translateY(-2px);
 }
 
-/* Form labels styling */
+/* Headings */
+h1 {
+  font-size: 2rem;
+  color: #0d47a1; /* Darker Blue for titles */
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: #1565c0; /* Mid-tone blue for subheadings */
+  margin-top: 1.8rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(21, 101, 192, 0.2);
+  padding-bottom: 4px;
+}
+
+/* Labels */
 label {
-    display: block;
-    margin: 10px 0 5px;
+  display: block;
+  font-weight: 500;
+  color: #1e88e5; /* Brighter blue */
+  margin-top: 1.2rem;
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
 }
 
-/* Inputs and textarea styling */
-input, textarea {
-    width: 100%; /* Full width for better responsiveness */
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box; /* Ensure padding and border are included in width */
+/* Inputs */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid #90caf9; /* Soft blue border */
+  border-radius: 6px;
+  background-color: #e3f2fd; /* Light blue background */
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Button styling */
-button {
-    padding: 10px 15px;
-    background-color: rgb(139, 139, 232);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 20%; /* Full-width buttons for mobile */
-    box-sizing: border-box;
+.input-field:focus {
+  border-color: #1976d2; /* Darker blue on focus */
+  box-shadow: 0 0 5px rgba(25, 118, 210, 0.2);
+  outline: none;
 }
 
-button:hover {
-    background-color: rgb(118, 118, 230);
+/* Button */
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1e88e5; /* Brighter blue */
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 1rem;
 }
 
-/* Resume output container */
+.submit-button:hover {
+  background-color: #1565c0; /* Darker blue on hover */
+}
+
+.submit-button:active {
+  background-color: #0d47a1;
+}
+
+/* Resume Output */
 #resume-output {
-    margin-top: 30px;
+  margin-top: 2rem;
 }
 
 #resume-content {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background-color: #e3f2fd;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #90caf9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* Media Queries for responsive behavior */
+/* Media Queries */
 @media (max-width: 768px) {
-    .container {
-        padding: 15px;
-    }
+  h1 {
+    font-size: 1.8rem;
+  }
 
-    h1, h2 {
-        font-size: 1.5rem; /* Adjust heading sizes for tablet */
-    }
+  h2 {
+    font-size: 1.1rem;
+  }
 
-    button {
-        font-size: 0.9rem; /* Adjust button text size */
-    }
+  .submit-button {
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
+  .container {
+    padding: 20px;
+  }
 
-    .container {
-        padding: 10px;
-        max-width: 100%; /* Full width for mobile */
-    }
+  h1 {
+    font-size: 1.6rem;
+  }
 
-    h1, h2 {
-        font-size: 1.2rem; /* Smaller font sizes for mobile */
-    }
+  h2 {
+    font-size: 1rem;
+  }
 
-    input, textarea {
-        padding: 8px;
-        font-size: 0.9rem; /* Adjust input text size */
-    }
+  .input-field {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
 
-    button {
-        padding: 8px 10px;
-        font-size: 0.85rem;
-    }
+  .submit-button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
 }
