@@ -1,28 +1,37 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    background-color: #f0f2f5; /* Lighter background for a cleaner look */
+    min-height: 100vh;
+    background-color: #f3f4f6;
+    color: #2d3748;
 }
 
 .container {
     background: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 90%;
-    max-width: 800px;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 750px;
 }
 
 h1 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #1a202c;
+    margin-bottom: 30px;
     text-align: center;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #2d3748;
+    margin: 25px 0 15px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 5px;
 }
 
 form {
@@ -31,41 +40,46 @@ form {
 
 label {
     display: block;
-    margin: 12px 0 6px;
-    font-weight: 500;
+    font-weight: 600;
+    margin-top: 12px;
+    color: #4a5568;
 }
 
 input, textarea {
-    width: calc(100% - 24px); /* Adjust for padding */
+    width: 100%;
     padding: 12px;
-    margin-top: 4px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
+    margin-top: 8px;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
     font-size: 1rem;
+    color: #2d3748;
+    background-color: #edf2f7;
     box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 input:focus, textarea:focus {
-    border-color: #007bff;
+    border-color: #3182ce;
     outline: none;
-    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.2);
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.3);
 }
 
 button {
     display: inline-block;
-    margin: 10px 5px;
-    padding: 12px 20px;
+    margin: 12px 5px 0;
+    padding: 12px 24px;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     color: #ffffff;
-    background-color: #007bff;
+    background-color: #3182ce;
     font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #2b6cb0;
 }
 
 button:active {
@@ -73,27 +87,31 @@ button:active {
 }
 
 #resume {
-    margin-top: 30px;
-    padding: 20px;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    margin-top: 40px;
+    padding: 20px 30px;
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
 }
 
 #resume h2 {
-    font-size: 1.5rem;
-    color: #333;
+    font-size: 1.8rem;
+    color: #1a202c;
     margin-bottom: 20px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 5px;
 }
 
 #resume div {
-    line-height: 1.6;
+    line-height: 1.7;
+    color: #4a5568;
 }
 
 #resume p {
-    margin: 5px 0;
+    margin: 6px 0;
+    font-size: 1rem;
 }
 
 #resume strong {
-    color: #555;
+    color: #2d3748;
 }

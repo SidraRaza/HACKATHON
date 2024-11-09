@@ -1,0 +1,156 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Base styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: black; /* Light blue background */
+  color: #333;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  max-width: 600px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid #bbdefb; /* Soft border for a clean blue look */
+}
+
+.container:hover {
+  transform: translateY(-2px);
+}
+
+/* Headings */
+h1 {
+  font-size: 2rem;
+  color: black; /* Darker Blue for titles */
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: black; /* Mid-tone blue for subheadings */
+  margin-top: 1.8rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(21, 101, 192, 0.2);
+  padding-bottom: 4px;
+}
+
+/* Labels */
+label {
+  display: block;
+  font-weight: 500;
+  color: black; /* Brighter blue */
+  margin-top: 1.2rem;
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+
+/* Inputs */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid black; /* Soft blue border */
+  border-radius: 6px;
+  background-color: #e5e6e6; /* Light blue background */
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #1976d2; /* Darker blue on focus */
+  box-shadow: 0 0 5px rgba(25, 118, 210, 0.2);
+  outline: none;
+}
+
+/* Button */
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: black; /* Brighter blue */
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 1rem;
+}
+
+.submit-button:hover {
+  background-color: rgb(59, 58, 58); /* Darker blue on hover */
+}
+
+.submit-button:active {
+  background-color: gray;
+}
+
+/* Resume Output */
+#resume-output {
+  margin-top: 2rem;
+}
+
+#resume-content {
+  background-color: #e3f2fd;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #90caf9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  .submit-button {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .input-field {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .submit-button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
